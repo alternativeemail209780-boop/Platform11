@@ -1,4 +1,4 @@
-# CRAFT platform - UPDATE 171 (compact deploy build)
+# CRAFT platform - UPDATE 172 (compact deploy build)
 
 Same 6-file layout as before:
 
@@ -17,13 +17,14 @@ Same 6-file layout as before:
 3. The first start prints `[launcher] unpacked N files`, then `[TEAMARENA] Mounted at /teamarena` and 17 lines from `[HANGMAN] Mounted at /hangman` to `[TREASUREGRID] Mounted at /treasuregrid`.
    Saved settings under `app/data/` are never overwritten.
 
-## What's new in 171
-* **TEAM ARENA** - Platforms 8, 9 and 10 merged into one: 33 formats (7 word duels brought back: Codedle, Shapedle, Colorblindle, Colordle, Structle, Comparable, Linedle),
-  +192 trivia questions, +4 question kinds (missing vowels, odd one out, secret code, emoji decoder) in every quiz format.
-* **HANGMAN** - unlimited tries, uses all Word Shuffle categories.
-* **16 new ARCADE games** - Emoji Decoder, Missing Vowels, Odd One Out, Math Blitz, Secret Code, Word Rush, Name Them All, Peekaboo,
-  Chat vs Bot Tic-Tac-Toe, Crowd Connect 4, Maze Runner, Snake Crowd, Higher or Lower, This or That, Simon Says, Treasure Grid.
-* Full details: `CHANGES_UPDATE_171.md` (inside the unpacked `app/` folder).
+## What's new in 172
+No game treats the whole chat as ONE player any more. Six ARCADE games were rebuilt so every viewer plays and scores for themselves (same ids and URLs):
 
-New games live at `/<game id>/`, e.g. `/hangman/`, `/emojidecoder/`, `/vowels/`, `/oddoneout/`, `/mathblitz/`, `/secretcode/`, `/wordrush/`, `/namethemall/`, `/peekaboo/`,
-`/tictactoe/`, `/connect4/`, `/mazerunner/`, `/snakechat/`, `/higherlower/`, `/thisorthat/`, `/simonsays/`, `/treasuregrid/`.
+* **TIC TAC TACTICS** (`/tictactoe/`) - find the winning or blocking square; first right answer scores.
+* **CONNECT 4 TACTICS** (`/connect4/`) - find the winning or blocking column; first right answer scores.
+* **MAZE RUNNER** (`/mazerunner/`) - every viewer has their own runner and races to the flag.
+* **SNAKE ARENA** (`/snakechat/`) - every viewer steers their own snake in a shared arena.
+* **HIGHER OR LOWER** (`/higherlower/`) - every viewer keeps their own streak.
+* **THIS OR THAT** (`/thisorthat/`) - an A/B fact quiz, right answers score, fastest gets a bonus.
+
+Full details: `CHANGES_UPDATE_172.md` (inside the unpacked `app/` folder).
