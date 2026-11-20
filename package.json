@@ -1,9 +1,9 @@
 {
   "name": "tiktok-live-game-platform",
-  "version": "2.99.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
-  "description": "A TikTok LIVE game platform hosting fifty independent games (incl. TEAM ARENA with thirty-three team, word-duel and duel formats, and the ARCADE set: Hangman, Emoji Decoder, Missing Vowels, Odd One Out, Math Blitz, Secret Code, Word Rush, Name Them All, Peekaboo, Tic Tac Tactics, Connect 4 Tactics, Maze Runner, Snake Arena, Higher or Lower, This or That, Simon Says, Treasure Grid) behind one game-selector screen, each reading real audience chat as guesses. Word games can be played in English, Bahasa Indonesia, Bahasa Melayu (Malaysia) or any mix.",
+  "description": "A TikTok LIVE game platform hosting eighty independent games (incl. TEAM ARENA with thirty-three team, word-duel and duel formats, and the ARCADE set: Hangman, Emoji Decoder, Missing Vowels, Odd One Out, Math Blitz, Secret Code, Word Rush, Name Them All, Peekaboo, Tic Tac Tactics, Connect 4 Tactics, Maze Runner, Higher or Lower, This or That, Simon Says, Treasure Grid, plus 31 more added in update 173: What's Next, Missing Signs, Make The Target, Sum Pyramid, Number Translator, Unit Switch, Which Day, Number Spotter, Emoji Equation, Clock Reader, Count It, Odd Emoji Out, Pattern Finish, Colour Trap, Line Them Up, Word Search, Word Mine, One Letter Off, Fill The Gap, Bookends, Spell Check, Capital Call, Continent Sort, City Finder, Malaysia Towns, Where In The World, Trivia Time, Fact Or Fib, Clue Ladder, Finish The Saying, Closest Guess) behind one game-selector screen, each reading real audience chat as guesses. Word games can be played in English, Bahasa Indonesia, Bahasa Melayu (Malaysia) or any mix.",
   "main": "start.js",
   "scripts": {
     "start": "node start.js",

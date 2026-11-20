@@ -1,30 +1,30 @@
-# CRAFT platform - UPDATE 172 (compact deploy build)
+# CRAFT platform - UPDATE 173
 
-Same 6-file layout as before:
+**What changed in this update**
+* **Snake Arena is removed** (it needed instant steering, which does not work with TikTok's chat delay).
+* **31 new games** were added. Every viewer plays for themselves, and all rounds are slow enough for chat delay.
+
+| Group | New games |
+|---|---|
+| Numbers & maths | What's Next · Missing Signs · Make The Target · Sum Pyramid · Number Translator · Unit Switch · Which Day · Number Spotter · Emoji Equation |
+| Pictures & logic | Clock Reader · Count It · Odd Emoji Out · Pattern Finish · Colour Trap · Line Them Up |
+| Word games | Word Search · Word Mine · One Letter Off · Fill The Gap · Bookends · Spell Check |
+| Geography | Capital Call · Continent Sort · City Finder · Malaysia Towns · Where In The World |
+| Quizzes | Trivia Time · Fact Or Fib · Clue Ladder · Finish The Saying · Closest Guess |
+
+The full list with web addresses is in `CHANGES_UPDATE_173.md` (inside the unpacked `app/` folder).
+
+## Deploy (same as always)
+1. Upload ALL files in this folder to your GitHub repository (replace the old ones).
+2. Render redeploys by itself. Build Command `npm install`, Start Command `npm start` (unchanged).
+3. No new settings and no new packages. Your saved settings and records are kept.
+4. In the Render log you should see `[launcher] unpacked ... files` and then one `Mounted at /...` line per ARCADE game, ending with `[CLOSESTGUESS] Mounted at /closestguess`.
 
 | File | Purpose |
 |---|---|
-| `package.json` | dependencies + `npm start` |
+| `package.json` | list of packages + `npm start` |
 | `start.js` | launcher: unpacks `app.pack` into `app/` and starts the platform |
-| `app.pack` | the entire platform (50 games, compressed) |
-| `.env.example` | environment variable reference |
-| `.gitignore` | keeps `app/`, `node_modules/`, runtime data out of git |
+| `app.pack` | the whole platform (80 games, compressed) |
+| `.env.example` | reference for the environment variables |
+| `.gitignore` | keeps `app/`, `node_modules/` and saved data out of git |
 | `README.md` | this file |
-
-## Deploy (Render)
-1. Upload these files to GitHub (replace the previous files).
-2. Render: Build Command `npm install`, Start Command `npm start`. Environment variables are unchanged (no new ones).
-3. The first start prints `[launcher] unpacked N files`, then `[TEAMARENA] Mounted at /teamarena` and 17 lines from `[HANGMAN] Mounted at /hangman` to `[TREASUREGRID] Mounted at /treasuregrid`.
-   Saved settings under `app/data/` are never overwritten.
-
-## What's new in 172
-No game treats the whole chat as ONE player any more. Six ARCADE games were rebuilt so every viewer plays and scores for themselves (same ids and URLs):
-
-* **TIC TAC TACTICS** (`/tictactoe/`) - find the winning or blocking square; first right answer scores.
-* **CONNECT 4 TACTICS** (`/connect4/`) - find the winning or blocking column; first right answer scores.
-* **MAZE RUNNER** (`/mazerunner/`) - every viewer has their own runner and races to the flag.
-* **SNAKE ARENA** (`/snakechat/`) - every viewer steers their own snake in a shared arena.
-* **HIGHER OR LOWER** (`/higherlower/`) - every viewer keeps their own streak.
-* **THIS OR THAT** (`/thisorthat/`) - an A/B fact quiz, right answers score, fastest gets a bonus.
-
-Full details: `CHANGES_UPDATE_172.md` (inside the unpacked `app/` folder).
