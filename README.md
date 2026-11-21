@@ -1,30 +1,26 @@
-# CRAFT platform - UPDATE 173
+# CRAFT platform - UPDATE 175 (compact deploy build)
 
-**What changed in this update**
-* **Snake Arena is removed** (it needed instant steering, which does not work with TikTok's chat delay).
-* **31 new games** were added. Every viewer plays for themselves, and all rounds are slow enough for chat delay.
-
-| Group | New games |
-|---|---|
-| Numbers & maths | What's Next · Missing Signs · Make The Target · Sum Pyramid · Number Translator · Unit Switch · Which Day · Number Spotter · Emoji Equation |
-| Pictures & logic | Clock Reader · Count It · Odd Emoji Out · Pattern Finish · Colour Trap · Line Them Up |
-| Word games | Word Search · Word Mine · One Letter Off · Fill The Gap · Bookends · Spell Check |
-| Geography | Capital Call · Continent Sort · City Finder · Malaysia Towns · Where In The World |
-| Quizzes | Trivia Time · Fact Or Fib · Clue Ladder · Finish The Saying · Closest Guess |
-
-The full list with web addresses is in `CHANGES_UPDATE_173.md` (inside the unpacked `app/` folder).
-
-## Deploy (same as always)
-1. Upload ALL files in this folder to your GitHub repository (replace the old ones).
-2. Render redeploys by itself. Build Command `npm install`, Start Command `npm start` (unchanged).
-3. No new settings and no new packages. Your saved settings and records are kept.
-4. In the Render log you should see `[launcher] unpacked ... files` and then one `Mounted at /...` line per ARCADE game, ending with `[CLOSESTGUESS] Mounted at /closestguess`.
+Same 6-file layout as before:
 
 | File | Purpose |
 |---|---|
-| `package.json` | list of packages + `npm start` |
+| `package.json` | dependencies + `npm start` |
 | `start.js` | launcher: unpacks `app.pack` into `app/` and starts the platform |
-| `app.pack` | the whole platform (80 games, compressed) |
-| `.env.example` | reference for the environment variables |
-| `.gitignore` | keeps `app/`, `node_modules/` and saved data out of git |
+| `app.pack` | the entire platform (100 games, compressed) |
+| `.env.example` | environment variable reference |
+| `.gitignore` | keeps `app/`, `node_modules/`, runtime data out of git |
 | `README.md` | this file |
+
+## Deploy (Render)
+1. Upload these files to GitHub (replace the previous files).
+2. Render: Build Command `npm install`, Start Command `npm start`. Environment variables are unchanged (no new ones).
+3. The first start prints `[launcher] unpacked N files`, then `[TEAMARENA] Mounted at /teamarena` and 17 lines from `[HANGMAN] Mounted at /hangman` to `[TREASUREGRID] Mounted at /treasuregrid`.
+   Saved settings under `app/data/` are never overwritten.
+
+## What is new in 175
+* **Games 33-100 quality pass:** every setting audited and tested (no dead settings), shared timing / scoring / hint / session settings verified in the real engine, 1,890 screens rendered without errors.
+* **One-screen fit:** each game's stage now scales itself to fit the phone screen - nothing is pushed off the bottom.
+* **More customization** for the 50 newest games: region filters, option counts, grid sizes, question types, ranges, currencies and more (all "0 = by difficulty").
+* Test mode fixes (Word Rush, Odd One Out, Hangman, Team Arena start-up).
+
+Full details: `CHANGES_UPDATE_175.md` (inside the unpacked `app/` folder).
